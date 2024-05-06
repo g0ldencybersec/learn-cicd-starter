@@ -28,7 +28,7 @@ func TestGetAPIKey(t *testing.T) {
 		{
 			name:        "Malformed Authorization header",
 			headers:     http.Header{"Authorization": []string{"Bearer token"}},
-			expectedKey: "sdf",
+			expectedKey: "",
 			expectedErr: errors.New("malformed authorization header"),
 		},
 	}
